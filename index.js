@@ -1,7 +1,11 @@
 const express = require('express');
+const cors = require('cors'); // Import CORS
+
 const app = express();
 
-// Use Render's dynamic port OR default to 3000 for local development
+// Use CORS Middleware
+app.use(cors());
+
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
